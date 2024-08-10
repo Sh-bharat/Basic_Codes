@@ -23,3 +23,16 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 ```
+
+## 2) For Check/Create Output Directory
+```
+## For Check/Create Output Directory
+import os
+
+Output_path=os.path.join(os.getcwd,"Output")
+if(os.path.exists(Output_path)):
+    print(f'Output Directory Found')
+else:
+    os.mkdir(Output_path)
+    print(f'Output Directory Created')
+```
