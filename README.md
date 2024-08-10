@@ -29,7 +29,7 @@ cv2.destroyAllWindows()
 ## For Check/Create Output Directory
 import os
 
-Output_path=os.path.join(os.getcwd,"Output")
+Output_path=os.path.join(os.getcwd(),"Output")
 if(os.path.exists(Output_path)):
     print(f'Output Directory Found')
 else:
