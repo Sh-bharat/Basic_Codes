@@ -57,3 +57,14 @@ go to your profile on kaggle ```->``` Accounts ```->``` API ```->``` create new 
 ### 2) the Dataset api command 
 go to kaggle Dataset ```->``` 3 Dots ```->``` Copy Api Command
 
+## 4) For Sorting of Files
+```
+import re
+
+def sorted_alphanumeric(data):  
+    convert = lambda text: int(text) if text.isdigit() else text.lower()
+    alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)',key)]
+    return sorted(data,key = alphanum_key)
+```
+
+
