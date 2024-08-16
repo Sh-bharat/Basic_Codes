@@ -36,3 +36,24 @@ else:
     os.mkdir(Output_path)
     print(f'Output Directory Created')
 ```
+
+## 3) For Downloading Dataset from kaggle to Colab
+
+```
+## Downloading Dataset from Kaggle
+!mkdir ~/.kaggle
+!cp kaggle.json ~/.kaggle/
+
+!kaggle datasets download -d balraj98/duts-saliency-detection-dataset
+
+import zipfile
+Zipis=zipfile.ZipFile("/content/duts-saliency-detection-dataset.zip")
+Zipis.extractall('/content')
+Zipis.close()
+```
+### For
+### 1) kaggle.json file <br>
+go to your profile on kaggle ```->``` Accounts ```->``` API ```->``` create new API token<br>
+### 2) the Dataset api command 
+go to kaggle Dataset ```->``` 3 Dots ```->``` Copy Api Command
+
