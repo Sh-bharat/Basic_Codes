@@ -44,10 +44,10 @@ else:
 !mkdir ~/.kaggle
 !cp kaggle.json ~/.kaggle/
 
-!kaggle datasets download -d balraj98/duts-saliency-detection-dataset
+!kaggle datasets download -d username/dataset_name
 
 import zipfile
-Zipis=zipfile.ZipFile("/content/duts-saliency-detection-dataset.zip")
+Zipis=zipfile.ZipFile("/content/dataset_name.zip")
 Zipis.extractall('/content')
 Zipis.close()
 ```
