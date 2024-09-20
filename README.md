@@ -67,4 +67,17 @@ def sorted_alphanumeric(data):
     return sorted(data,key = alphanum_key)
 ```
 
+## 5) For Extracting from zipfile
+```
+import os
+import zipfile
+
+zip_file_path = '/content/Dataset.zip'
+extract_path = '/content'
+if not os.path.exists(extract_path):
+    os.makedirs(extract_path)
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_path)
+```
+
 
